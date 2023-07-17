@@ -6,7 +6,7 @@
 
 ```
 sudo apt-get update; \
-  sudo apt install mono-complete
+  sudo apt install mono-complete dotnet-sdk-6.0
 ```
 
 
@@ -14,7 +14,7 @@ sudo apt-get update; \
 
 - Clone this project
   ```
-  git clone https://github.com/RobotecAI/ros2cs
+  git clone https://github.com/Kotakku/ros2cs
   ```
 - Source your ROS2 installation
   ```bash
@@ -34,7 +34,7 @@ sudo apt-get update; \
   ```
 - Build package in _overlay_ mode:
   ```bash
-  ./build_android.sh -p <path-to-android-NDK>
+  source ./build_android.sh -p <path-to-android-NDK>
   ```
 
   - It invokes `colcon_build` with `--merge-install` argument to simplify libraries installation.

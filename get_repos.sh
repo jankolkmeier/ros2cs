@@ -5,8 +5,8 @@ if [ -z "${ROS_DISTRO}" ]; then
     exit 1
 fi
 
-echo "Detected ROS2 ${ROS_DISTRO}. Getting required repos from 'ros2_"${ROS_DISTRO}".repos'"
-vcs import src < ros2_"${ROS_DISTRO}".repos
+echo "Detected ROS2 ${ROS_DISTRO}. Getting required repos from 'ros2_"${ROS_DISTRO}_android".repos'"
+vcs import src < ros2_"${ROS_DISTRO}_android".repos
 
 if [ "$1" = "--get-custom-messages" ]; then
     echo -e "\nGetting custom messages from 'custom_messages.repos'."

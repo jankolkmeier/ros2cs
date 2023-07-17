@@ -56,7 +56,6 @@ PKG_AMENT="${AMENT_CMAKE} ${AMENT_LINT} ${AMENT_INDEX} ${AMENT_DOTNET} ament_cma
 colcon build --symlink-install \
 --build-base build/host \
 --install-base install/host \
---cmake-clean-cache \
 --packages-skip-build \
 --packages-up-to ${PKG_AMENT}
 
@@ -64,11 +63,6 @@ source install/host/setup.bash
 
 echo "#################### Device build of ROS2 ####################"
 
-# export ANDROID_SDK=/home/uowner/Unity/Hub/Editor/2021.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK
-# export ANDROID_NDK=/home/uowner/Unity/Hub/Editor/2021.3.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK
-
-# export PATH=$ANDROID_SDK/tools/bin:${PATH}
-# export PATH=$ANDROID_SDK/platform-tools:${PATH}
 export ANDROID_ABI=arm64-v8a
 export ANDROID_NATIVE_API_LEVEL=28
 export ANDROID_TOOLCHAIN_NAME=aarch64-linux-android-clang
@@ -95,9 +89,8 @@ colcon build \
 --build-base build/device \
 --install-base install/device \
 --event-handlers console_direct+ \
---packages-ignore-regex ament_cmake* ${PKG_IGNORE} ament_lint ament_xmllint rosidl_cli tf2 \
+--packages-ignore-regex ament_cmake* ${PKG_IGNORE} ament_lint ament_xmllint rosidl_cli tf2 ros2cs_examples \
 --merge-install \
---cmake-clean-cache \
 --cmake-args \
 -DCMAKE_BUILD_TYPE=Release \
 -DTRACETOOLS_DISABLED=ON \
