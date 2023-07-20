@@ -1,8 +1,8 @@
 import shutil
 import os
 
-target = "install/device/lib"
-output_target = "install/device/Plugins/Android"
+target = "install/lib"
+output_target = "install/Plugins/Android"
 
 os.makedirs(output_target, exist_ok=True)
 
