@@ -1,0 +1,7 @@
+image: map512x512.pgm
+mode: trinary
+resolution: 0.1
+origin: [0, 0, 0]
+negate: 0
+occupied_thresh: 0.9
+free_thresh: 0.1
