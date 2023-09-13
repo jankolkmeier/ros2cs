@@ -1,0 +1,11 @@
+--- FindCSBuild_original.cmake	2023-03-15 11:08:09.956419958 +0900
++++ FindCSBuild.cmake	2023-03-15 11:08:29.121178577 +0900
+@@ -37,6 +37,8 @@
+ 
+ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+     set(DotNetCore_PLATFORM "linux")
++elseif(CMAKE_SYSTEM_NAME STREQUAL "Android")
++    set(DotNetCore_PLATFORM "linux")
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+     set(DotNetCore_PLATFORM "osx")
+ elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows" OR CMAKE_SYSTEM_NAME STREQUAL "WindowsStore")

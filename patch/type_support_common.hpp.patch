@@ -1,0 +1,25 @@
+--- type_support_common_original.hpp	2023-03-15 10:17:59.311965527 +0900
++++ type_support_common.hpp	2023-03-14 23:34:21.366049106 +0900
+@@ -48,14 +48,18 @@
+     return "";
+   }
+ 
+-  std::ostringstream ss;
++  // std::ostringstream ss;
++  std::string ret = "";
+   std::string message_namespace(members->message_namespace_);
+   std::string message_name(members->message_name_);
+   if (!message_namespace.empty()) {
+-    ss << message_namespace << "::";
++    ret += message_namespace + "::";
++    // ss << message_namespace << "::";
+   }
+-  ss << "dds_::" << message_name << "_";
+-  return ss.str();
++  // ss << "dds_::" << message_name << "_";
++  ret += "dds_::" + message_name + "_";
++  // return ss.str();
++  return ret;
+ }
+ 
+ #endif  // TYPE_SUPPORT_COMMON_HPP_

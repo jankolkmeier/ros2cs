@@ -1,6 +1,9 @@
 Ros2cs
 =============
 
+**Ros2cs for Android**  
+- [Android Instructions](README-ANDROID.md)
+
 A C# .NET library for ROS2, including C# implementation of rcl APIs, message generation, tests and examples.
 
 Ros2cs is also an independent part of [Ros2 For Unity](https://github.com/RobotecAI/ros2-for-unity), which enables high-performance communication between simulation and ROS2 robot packages. Follow instructions there instead if you are intending to use ros2cs with Unity3D.

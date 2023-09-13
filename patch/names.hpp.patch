@@ -1,0 +1,28 @@
+--- names_original.hpp	2023-03-15 10:20:57.555905668 +0900
++++ names.hpp	2023-03-14 23:34:05.354517758 +0900
+@@ -34,15 +34,20 @@
+   const char * base,
+   const char * suffix = nullptr)
+ {
+-  std::ostringstream topicName;
++  //std::ostringstream topicName;
++  std::string topicName = "";
+   if (prefix) {
+-    topicName << prefix;
++    // topicName << prefix;
++    topicName += std::string(prefix);
+   }
+-  topicName << base;
++  // topicName << base;
++  topicName += std::string(base);
+   if (suffix) {
+-    topicName << suffix;
++    // topicName << suffix;
++    topicName += std::string(suffix);
+   }
+-  return topicName.str();
++  // return topicName.str();
++  return topicName;
+ }
+ 
+ /// Construct a topic name according to proper conventions.
